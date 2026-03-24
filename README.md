@@ -1,124 +1,133 @@
-# ✨ Agência Criativa Web
+# Agência Criativa Web — Refatoração CSS
 
-Projeto de uma **landing page responsiva** para uma agência fictícia de design digital chamada **Agência Criativa Web**.
+Projeto acadêmico de uma página responsiva para a **Agência Criativa Web**, refatorado com foco em **organização do CSS**, **padronização com metodologia BEM**, **reutilização de classes** e **facilidade de manutenção**.
 
-A proposta foi desenvolvida com foco em um visual moderno, limpo e atrativo, inspirado em referências de sites contemporâneos de marca, mas com uma estrutura **mais simples, organizada e acadêmica**, facilitando a leitura do código e a compreensão dos conceitos.
+## Visão geral
 
----
+Esta versão foi reorganizada a partir do projeto original, com separação entre:
 
-## 📌 Objetivo do projeto
+- `index.html` → estrutura semântica da página
+- `layout.css` → regras de layout, containers, grid, flexbox e responsividade
+- `style.css` → identidade visual, tipografia, botões, cards e componentes
 
-Construir uma página web aplicando os principais conceitos de:
-
-- **HTML5 semântico**
-- **CSS externo**
-- **Design Responsivo**
-- **Unidades relativas** (`rem`, `em`, `%`, `vh`, `vw`, `fr`)
-- **Flexbox**
-- **CSS Grid**
-- **Media Queries**
-- **Imagens responsivas com `srcset`**
+O objetivo foi deixar o código mais limpo, modular e sustentável.
 
 ---
 
-## 🖥️ Estrutura da página
+## Tecnologias utilizadas
 
-O site foi dividido nas seguintes seções:
-
-- **Home** → banner principal com destaque da agência
-- **Sobre Nós** → apresentação da marca e valores
-- **Serviços** → cards com os principais serviços oferecidos
-- **Depoimentos** → comentários fictícios de clientes
-- **Contato** → informações de contato + formulário
-
----
-
-## 🎨 Características visuais
-
-- Layout moderno e elegante
-- Tipografia limpa e profissional
-- Paleta com tons escuros e detalhes em azul claro
-- Cards com aparência leve e contemporânea
-- Estrutura inspirada em sites de marcas digitais
-- Navegação simples e responsiva
+- HTML5
+- CSS3
+- Flexbox
+- CSS Grid
+- Media Queries
+- Unidades relativas (`rem`, `vh`, `%`, `fr`)
+- Metodologia BEM
 
 ---
 
-## 🛠️ Tecnologias utilizadas
-
-- **HTML5**
-- **CSS3**
-- **Google Fonts (Inter)**
-
----
-
-## 📂 Estrutura de arquivos
+## Estrutura do projeto
 
 ```bash
-agencia-criativa-web/
-│
+agencia-criativa-web-refatorado/
 ├── index.html
-├── estilos.css
+├── layout.css
+├── style.css
 └── README.md
 ```
 
 ---
 
-## ✅ Conceitos aplicados no código
+## Seções da página
 
-### HTML
-- Estrutura semântica com `header`, `nav`, `main`, `section`, `form` e `footer`
-- Menu de navegação com links internos
-- Formulário com campos básicos: nome, e-mail e mensagem
+A página contém as seguintes áreas:
 
-### CSS
-- **Flexbox** no cabeçalho, menu, botões e depoimentos
-- **CSS Grid** na seção de serviços e em blocos estruturais
-- **Media queries** para adaptação em tablets e celulares
-- Uso de **unidades relativas** para garantir flexibilidade
-- Ajustes visuais para leitura e organização em telas menores
-
-### Responsividade
-- Layout adaptável para diferentes resoluções
-- Imagens com `srcset` e `sizes`
-- Redução inteligente de colunas em telas menores
-- Reorganização de seções com foco em usabilidade mobile
+- **Home** — banner principal com destaque da agência
+- **Sobre nós** — descrição da proposta e valores
+- **Serviços** — cards com os serviços oferecidos
+- **Depoimentos** — comentários fictícios de clientes
+- **Contato** — informações e formulário de contato
 
 ---
 
+## Melhorias aplicadas na refatoração
 
-## 💡 Sugestões de melhoria futura
+### 1. Organização do CSS
+- remoção de repetições desnecessárias
+- separação entre estrutura e aparência
+- hierarquia mais clara entre estilos globais e componentes
 
-- Adicionar menu hambúrguer com JavaScript
-- Inserir animações suaves ao rolar a página
-- Conectar o formulário a um backend ou serviço de envio
-- Criar versão com páginas internas
-- Adicionar favicon e identidade visual própria
+### 2. Padronização com BEM
+Exemplos usados no projeto:
+
+- `.site-header__content`
+- `.section-heading__title`
+- `.service-card--featured`
+- `.contact-form__input--textarea`
+
+Isso facilita leitura, manutenção e expansão futura do código.
+
+### 3. Reutilização de classes
+Foram criadas classes reutilizáveis como:
+
+- `.container`
+- `.section`
+- `.card`
+- `.card--light`
+- `.card--dark`
+- `.btn`
+- `.btn--primary`
+- `.btn--secondary`
+
+### 4. Responsividade mantida
+O projeto continua totalmente responsivo com:
+
+- Flexbox no cabeçalho, botões e depoimentos
+- CSS Grid nas áreas principais e na seção de serviços
+- Media queries para tablets e celulares
+- imagens com `srcset`
 
 ---
 
-## 📚 Aprendizados demonstrados
+## Como executar localmente
 
-Este projeto demonstra compreensão prática de:
+Basta abrir o arquivo `index.html` no navegador.
 
-- estruturação semântica em HTML;
-- organização visual com CSS;
-- responsividade para múltiplos dispositivos;
-- uso correto de Flexbox e Grid;
-- adaptação de layout com media queries;
-- aplicação de boas práticas de organização de código.
+Se quiser rodar com servidor local no VS Code, pode usar a extensão **Live Server**.
 
 ---
 
-## 📎 Observação
+## Como subir no GitHub
 
-Este projeto foi criado para fins educacionais e acadêmicos. A marca **Agência Criativa Web** é fictícia.  
-<br>
-Site que foi baseado o projeto foi:
-https://www.vivala.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=pesquisa-meiofunil-geral&gad_source=1&gad_campaignid=22534867867&gbraid=0AAAAADHhEbl9Yo3a_hd6wvCGn--tQqJ70&gclid=Cj0KCQjw7IjOBhDyARIsAFzrWQyBnhCywOiOWlYjc1Rcp4mOYQvpkf-S9UYeUVqTr_T70No_oMAW0hgaAkTMEALw_wcB
+Depois de colocar os arquivos na pasta do projeto, use:
+
+```bash
+git add .
+git commit -m "refatora CSS com BEM e separa layout e estilo"
+git push origin main
+```
+
+Se o GitHub recusar por divergência de histórico:
+
+```bash
+git pull origin main --rebase
+git push origin main
+```
 
 ---
 
-## 👨‍💻 Autor
+## Objetivo da atividade
 
-Desenvolvido por **Felipe Gabriel Lambiazzi**.
+Aplicar os conceitos do módulo em uma página realista, com atenção a:
+
+- design responsivo
+- manutenção de código
+- organização do CSS
+- nomenclatura consistente
+- boas práticas de desenvolvimento front-end
+
+---
+
+## Autor
+
+Projeto desenvolvido para fins acadêmicos por **Felipe Gabriel Lambiazzi**.

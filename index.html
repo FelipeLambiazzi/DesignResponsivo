@@ -1,288 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Agência Criativa Web - design digital, branding e desenvolvimento web com foco em experiências modernas e responsivas."
-  />
-  <title>Agência Criativa Web</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
-  <!-- Cabeçalho principal com logo e navegação -->
-  <header class="topo">
-    <div class="container topo-conteudo">
-      <a class="logo" href="#home" aria-label="Ir para a seção inicial">
-        <span class="logo-marca">AC</span>
-        <span class="logo-texto">
-          <strong>Agência Criativa Web</strong>
-          <small>Design digital com estratégia</small>
-        </span>
-      </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agência Criativa Web - projeto de página responsiva com HTML5 e CSS, utilizando BEM, Flexbox, CSS Grid, media queries e unidades relativas."
+    />
+    <title>Agência Criativa Web</title>
 
-      <nav class="menu" aria-label="Menu principal">
-        <ul class="menu-lista">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <main>
-    <!-- Banner principal -->
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-texto">
-          <p class="selo">Design responsivo • identidade marcante • performance visual</p>
-          <h1>Criamos experiências digitais que conectam marcas e pessoas.</h1>
-          <p class="hero-descricao">
-            A Agência Criativa Web desenvolve soluções modernas para empresas que desejam
-            fortalecer sua presença online com estratégia, estética e usabilidade.
-          </p>
+    <!-- CSS separado em estrutura/layout e estilo visual -->
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <!-- Cabeçalho principal -->
+    <header class="site-header">
+      <div class="container site-header__content">
+        <a class="brand" href="#home" aria-label="Ir para a seção inicial da página">
+          <span class="brand__mark">AC</span>
+          <span class="brand__text-group">
+            <span class="brand__title">Agência Criativa Web</span>
+            <span class="brand__subtitle">Design digital com estratégia</span>
+          </span>
+        </a>
 
-          <div class="hero-acoes">
-            <a class="botao botao-primario" href="#contato">Solicitar orçamento</a>
-            <a class="botao botao-secundario" href="#servicos">Ver serviços</a>
+        <nav class="nav" aria-label="Menu principal">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
+            <li class="nav__item"><a class="nav__link" href="#sobre">Sobre</a></li>
+            <li class="nav__item"><a class="nav__link" href="#servicos">Serviços</a></li>
+            <li class="nav__item"><a class="nav__link" href="#depoimentos">Depoimentos</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero__layout">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Design responsivo • branding • presença digital</p>
+            <h1 class="hero__title">Criamos experiências digitais que valorizam marcas.</h1>
+            <p class="hero__description">
+              A Agência Criativa Web desenvolve soluções visuais modernas para empresas que querem
+              unir criatividade, clareza e impacto em todos os pontos de contato com seu público.
+            </p>
+
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contato">Solicitar orçamento</a>
+              <a class="btn btn--secondary" href="#servicos">Conhecer serviços</a>
+            </div>
+
+            <ul class="hero__highlights" aria-label="Diferenciais da agência">
+              <li class="hero__highlight-item">Sites responsivos</li>
+              <li class="hero__highlight-item">Identidade visual</li>
+              <li class="hero__highlight-item">Experiência moderna</li>
+            </ul>
           </div>
 
-          <ul class="hero-destaques" aria-label="Principais diferenciais da agência">
-            <li>Sites responsivos</li>
-            <li>Branding estratégico</li>
-            <li>Layouts modernos</li>
-          </ul>
+          <div class="hero__media">
+            <img
+              class="hero__image"
+              src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=80"
+              srcset="
+                https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=480&q=80 480w,
+                https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=768&q=80 768w,
+                https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 45vw"
+              alt="Equipe criativa trabalhando no planejamento de um projeto digital"
+            />
+          </div>
         </div>
+      </section>
 
-        <div class="hero-imagem">
-          <img
-            src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=80"
-            srcset="
-              https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=480&q=80 480w,
-              https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=768&q=80 768w,
-              https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80 1200w
-            "
-            sizes="(max-width: 768px) 100vw, 45vw"
-            alt="Equipe criativa planejando um projeto digital em ambiente moderno"
-          />
+      <section class="section section--light" id="sobre">
+        <div class="container about">
+          <div class="about__content">
+            <div class="section-heading section-heading--dark">
+              <p class="section-heading__eyebrow">Sobre nós</p>
+              <h2 class="section-heading__title">Design com propósito e comunicação com impacto.</h2>
+            </div>
+
+            <p class="about__text">
+              Somos uma agência fictícia criada para demonstrar a aplicação de boas práticas em
+              HTML e CSS. Nossa proposta é unir criatividade, tecnologia e organização visual em
+              um site moderno, leve e adaptável.
+            </p>
+            <p class="about__text">
+              Valorizamos clareza, inovação, colaboração e consistência visual para construir
+              experiências digitais memoráveis e profissionais.
+            </p>
+          </div>
+
+          <div class="about__card card card--light">
+            <img
+              class="about__image"
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+              srcset="
+                https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=480&q=80 480w,
+                https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=768&q=80 768w,
+                https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80 1000w
+              "
+              sizes="(max-width: 768px) 100vw, 40vw"
+              alt="Profissionais reunidos em um ambiente colaborativo"
+            />
+
+            <div class="metrics">
+              <article class="metrics__item">
+                <strong class="metrics__value">+30</strong>
+                <span class="metrics__label">projetos conceituais</span>
+              </article>
+              <article class="metrics__item">
+                <strong class="metrics__value">100%</strong>
+                <span class="metrics__label">foco em responsividade</span>
+              </article>
+              <article class="metrics__item">
+                <strong class="metrics__value">360°</strong>
+                <span class="metrics__label">visão de marca</span>
+              </article>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Seção sobre -->
-    <section id="sobre" class="secao secao-clara">
-      <div class="container sobre-grid">
-        <div>
-          <p class="secao-etiqueta">Sobre nós</p>
-          <h2>Design com propósito, comunicação com impacto.</h2>
-          <p>
-            Somos uma agência fictícia criada para unir criatividade, tecnologia e visão de
-            negócio. Atuamos com foco em projetos que valorizam clareza visual, navegação
-            intuitiva e resultados consistentes.
-          </p>
-          <p>
-            Nossos valores estão centrados em inovação, colaboração, atenção aos detalhes e
-            construção de marcas memoráveis no ambiente digital.
-          </p>
-        </div>
+      <section class="section section--dark" id="servicos">
+        <div class="container">
+          <div class="section-heading section-heading--light section-heading--split">
+            <div class="section-heading__group">
+              <p class="section-heading__eyebrow">Serviços</p>
+              <h2 class="section-heading__title">Soluções criativas para destacar sua marca.</h2>
+            </div>
+            <p class="section-heading__description">
+              A estrutura abaixo utiliza CSS Grid para organizar os serviços em um layout
+              flexível, limpo e responsivo.
+            </p>
+          </div>
 
-        <div class="sobre-card">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-            srcset="
-              https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=480&q=80 480w,
-              https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=768&q=80 768w,
-              https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80 1000w
-            "
-            sizes="(max-width: 768px) 100vw, 40vw"
-            alt="Profissionais reunidos em um espaço colaborativo"
-          />
-
-          <div class="sobre-metricas">
-            <article>
-              <strong>+30</strong>
-              <span>projetos conceituais criados</span>
+          <div class="services-grid">
+            <article class="service-card card card--dark">
+              <span class="service-card__icon">✦</span>
+              <h3 class="service-card__title">Design Gráfico</h3>
+              <p class="service-card__text">
+                Peças visuais para campanhas, redes sociais, apresentações e materiais de apoio.
+              </p>
             </article>
-            <article>
-              <strong>100%</strong>
-              <span>foco em experiência responsiva</span>
+
+            <article class="service-card service-card--featured card card--dark">
+              <span class="service-card__icon">◆</span>
+              <h3 class="service-card__title">Desenvolvimento Web</h3>
+              <p class="service-card__text">
+                Sites modernos, organizados e totalmente adaptáveis a diferentes tamanhos de tela.
+              </p>
             </article>
-            <article>
-              <strong>360°</strong>
-              <span>visão estratégica da marca</span>
+
+            <article class="service-card card card--dark">
+              <span class="service-card__icon">●</span>
+              <h3 class="service-card__title">Branding</h3>
+              <p class="service-card__text">
+                Construção de identidade visual, posicionamento e coerência para a marca.
+              </p>
+            </article>
+
+            <article class="service-card card card--dark">
+              <span class="service-card__icon">▲</span>
+              <h3 class="service-card__title">UI/UX Design</h3>
+              <p class="service-card__text">
+                Interfaces intuitivas, agradáveis e pensadas para melhorar a experiência do usuário.
+              </p>
+            </article>
+
+            <article class="service-card card card--dark">
+              <span class="service-card__icon">■</span>
+              <h3 class="service-card__title">Social Media</h3>
+              <p class="service-card__text">
+                Conteúdo visual estratégico para fortalecer a presença digital da empresa.
+              </p>
+            </article>
+
+            <article class="service-card card card--dark">
+              <span class="service-card__icon">⬢</span>
+              <h3 class="service-card__title">Consultoria Criativa</h3>
+              <p class="service-card__text">
+                Diagnóstico visual e recomendações para evoluir a comunicação online da marca.
+              </p>
             </article>
           </div>
         </div>
+      </section>
+
+      <section class="section section--light" id="depoimentos">
+        <div class="container">
+          <div class="section-heading section-heading--dark section-heading--split">
+            <div class="section-heading__group">
+              <p class="section-heading__eyebrow">Depoimentos</p>
+              <h2 class="section-heading__title">Comentários que reforçam credibilidade.</h2>
+            </div>
+            <p class="section-heading__description">
+              Os depoimentos são fictícios e servem para compor a proposta visual do projeto.
+            </p>
+          </div>
+
+          <div class="testimonials">
+            <article class="testimonial-card card card--light">
+              <p class="testimonial-card__text">
+                “A equipe traduziu nossa proposta em um site elegante, organizado e muito agradável
+                de navegar.”
+              </p>
+              <h3 class="testimonial-card__name">Marina Alves</h3>
+              <span class="testimonial-card__role">Fundadora da Studio Lumina</span>
+            </article>
+
+            <article class="testimonial-card card card--light">
+              <p class="testimonial-card__text">
+                “O resultado trouxe mais profissionalismo para a marca e melhorou bastante nossa
+                presença digital.”
+              </p>
+              <h3 class="testimonial-card__name">Rafael Costa</h3>
+              <span class="testimonial-card__role">Diretor da Nexus Consultoria</span>
+            </article>
+
+            <article class="testimonial-card card card--light">
+              <p class="testimonial-card__text">
+                “A versão mobile ficou excelente. O conteúdo ficou claro e o visual muito moderno.”
+              </p>
+              <h3 class="testimonial-card__name">Bianca Freitas</h3>
+              <span class="testimonial-card__role">Gestora da Aurora Moda</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--contact" id="contato">
+        <div class="container contact">
+          <div class="contact__content">
+            <div class="section-heading section-heading--light">
+              <p class="section-heading__eyebrow">Contato</p>
+              <h2 class="section-heading__title">Vamos transformar sua presença digital?</h2>
+            </div>
+
+            <p class="contact__text">
+              Entre em contato para conversar sobre branding, design visual, desenvolvimento web e
+              novas estratégias para sua marca.
+            </p>
+
+            <ul class="contact-list">
+              <li class="contact-list__item"><strong>Endereço:</strong> Rua das Ideias, 250 - Centro, São Paulo - SP</li>
+              <li class="contact-list__item"><strong>Telefone:</strong> (11) 4000-2026</li>
+              <li class="contact-list__item"><strong>E-mail:</strong> contato@agenciacriativaweb.com.br</li>
+            </ul>
+          </div>
+
+          <form class="contact-form card card--dark" action="#" method="post">
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="nome">Nome</label>
+              <input class="contact-form__input" type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="email">E-mail</label>
+              <input class="contact-form__input" type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+            </div>
+
+            <div class="contact-form__group">
+              <label class="contact-form__label" for="mensagem">Mensagem</label>
+              <textarea
+                class="contact-form__input contact-form__input--textarea"
+                id="mensagem"
+                name="mensagem"
+                rows="6"
+                placeholder="Conte um pouco sobre o seu projeto"
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn--primary contact-form__button" type="submit">Enviar mensagem</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__content">
+        <p class="site-footer__text">© 2026 Agência Criativa Web. Projeto acadêmico fictício.</p>
+        <a class="site-footer__link" href="#home">Voltar ao topo ↑</a>
       </div>
-    </section>
-    <section id="servicos" class="secao secao-escura">
-      <div class="container">
-        <p class="secao-etiqueta">Serviços</p>
-        <div class="secao-topo">
-          <h2>Soluções criativas para destacar sua marca no digital.</h2>
-          <p>
-            Estruturamos nossos serviços para combinar estética, funcionalidade e estratégia
-            em diferentes pontos de contato com o público.
-          </p>
-        </div>
-
-        <div class="servicos-grid">
-          <article class="card-servico">
-            <span class="icone">✦</span>
-            <h3>Design Gráfico</h3>
-            <p>
-              Produção de peças visuais para campanhas, redes sociais, apresentações e
-              materiais institucionais.
-            </p>
-          </article>
-
-          <article class="card-servico destaque">
-            <span class="icone">◆</span>
-            <h3>Desenvolvimento Web</h3>
-            <p>
-              Criação de sites modernos, responsivos e organizados para diferentes tamanhos de
-              tela e perfis de negócio.
-            </p>
-          </article>
-
-          <article class="card-servico">
-            <span class="icone">●</span>
-            <h3>Branding</h3>
-            <p>
-              Construção de identidade visual, posicionamento e linguagem de marca com foco em
-              coerência e diferenciação.
-            </p>
-          </article>
-
-          <article class="card-servico">
-            <span class="icone">▲</span>
-            <h3>UI/UX Design</h3>
-            <p>
-              Planejamento de interfaces intuitivas, acessíveis e visualmente agradáveis para
-              melhorar a experiência do usuário.
-            </p>
-          </article>
-
-          <article class="card-servico">
-            <span class="icone">■</span>
-            <h3>Social Media</h3>
-            <p>
-              Conteúdo visual e estratégico para fortalecer presença digital e gerar conexão
-              com o público.
-            </p>
-          </article>
-
-          <article class="card-servico">
-            <span class="icone">⬢</span>
-            <h3>Consultoria Criativa</h3>
-            <p>
-              Diagnóstico visual e orientações para marcas que desejam aprimorar sua comunicação
-              no ambiente online.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="secao secao-clara">
-      <div class="container">
-        <p class="secao-etiqueta">Depoimentos</p>
-        <div class="secao-topo">
-          <h2>Resultados percebidos por clientes fictícios.</h2>
-          <p>
-            Comentários ilustrativos para reforçar a proposta de valor da agência no contexto
-            deste projeto.
-          </p>
-        </div>
-
-        <div class="depoimentos-flex">
-          <article class="card-depoimento">
-            <p>
-              “A equipe traduziu exatamente a essência da nossa marca em um site elegante,
-              leve e fácil de navegar.”
-            </p>
-            <h3>Marina Alves</h3>
-            <span>Fundadora da Studio Lumina</span>
-          </article>
-
-          <article class="card-depoimento">
-            <p>
-              “O projeto trouxe mais profissionalismo para nossa presença digital e melhorou a
-              percepção dos nossos serviços.”
-            </p>
-            <h3>Rafael Costa</h3>
-            <span>Diretor da Nexus Consultoria</span>
-          </article>
-
-          <article class="card-depoimento">
-            <p>
-              “Gostamos muito do visual moderno e da organização do conteúdo. A experiência em
-              celular ficou excelente.”
-            </p>
-            <h3>Bianca Freitas</h3>
-            <span>Gestora da Aurora Moda</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="secao secao-contato">
-      <div class="container contato-grid">
-        <div>
-          <p class="secao-etiqueta">Contato</p>
-          <h2>Vamos transformar sua presença digital?</h2>
-          <p>
-            Entre em contato para conversar sobre identidade visual, desenvolvimento web ou uma
-            nova estratégia de comunicação para a sua marca.
-          </p>
-
-          <ul class="lista-contato">
-            <li><strong>Endereço:</strong> Rua das Ideias, 250 - Centro, São Paulo - SP</li>
-            <li><strong>Telefone:</strong> (11) 4000-2026</li>
-            <li><strong>E-mail:</strong> contato@agenciacriativaweb.com.br</li>
-          </ul>
-        </div>
-
-        <form class="formulario" action="#" method="post">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-
-          <label for="mensagem">Mensagem</label>
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            rows="6"
-            placeholder="Conte um pouco sobre o seu projeto"
-            required
-          ></textarea>
-
-          <button class="botao botao-primario" type="submit">Enviar mensagem</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- Rodapé -->
-  <footer class="rodape">
-    <div class="container rodape-conteudo">
-      <p>© 2026 Agência Criativa Web. Projeto acadêmico fictício.</p>
-      <a href="#home">Voltar ao topo ↑</a>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
