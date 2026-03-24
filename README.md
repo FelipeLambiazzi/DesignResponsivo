@@ -113,6 +113,8 @@ Este projeto demonstra compreensão prática de:
 ## 📎 Observação
 
 Este projeto foi criado para fins educacionais e acadêmicos. A marca **Agência Criativa Web** é fictícia.
+Site que foi baseado o proejto foi:
+https://www.vivala.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=pesquisa-meiofunil-geral&gad_source=1&gad_campaignid=22534867867&gbraid=0AAAAADHhEbl9Yo3a_hd6wvCGn--tQqJ70&gclid=Cj0KCQjw7IjOBhDyARIsAFzrWQyBnhCywOiOWlYjc1Rcp4mOYQvpkf-S9UYeUVqTr_T70No_oMAW0hgaAkTMEALw_wcB
 
 ---
 
