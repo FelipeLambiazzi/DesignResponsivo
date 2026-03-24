@@ -86,38 +86,6 @@ agencia-criativa-web/
 
 ---
 
-## 🚀 Como executar o projeto localmente
-
-1. Baixe ou clone este repositório:
-
-```bash
-git clone https://github.com/SEU-USUARIO/agencia-criativa-web.git
-```
-
-2. Entre na pasta do projeto:
-
-```bash
-cd agencia-criativa-web
-```
-
-3. Abra o arquivo `index.html` no navegador.
-
----
-
-## 🌐 Como publicar no GitHub
-
-Depois de criar seu repositório público no GitHub, use estes comandos no terminal:
-
-```bash
-git init
-git add .
-git commit -m "feat: cria landing page da Agência Criativa Web"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/agencia-criativa-web.git
-git push -u origin main
-```
-
----
 
 ## 💡 Sugestões de melhoria futura
 
