@@ -87,35 +87,6 @@ O projeto continua totalmente responsivo com:
 - Media queries para tablets e celulares
 - imagens com `srcset`
 
----
-
-## Como executar localmente
-
-Basta abrir o arquivo `index.html` no navegador.
-
-Se quiser rodar com servidor local no VS Code, pode usar a extensão **Live Server**.
-
----
-
-## Como subir no GitHub
-
-Depois de colocar os arquivos na pasta do projeto, use:
-
-```bash
-git add .
-git commit -m "refatora CSS com BEM e separa layout e estilo"
-git push origin main
-```
-
-Se o GitHub recusar por divergência de histórico:
-
-```bash
-git pull origin main --rebase
-git push origin main
-```
-
----
-
 ## Objetivo da atividade
 
 Aplicar os conceitos do módulo em uma página realista, com atenção a:
