@@ -1,112 +1,215 @@
-# Agência Criativa Web — Refatoração CSS
+# 🎨 Agência Criativa Web
 
-Projeto acadêmico de uma página responsiva para a **Agência Criativa Web**, refatorado com foco em **organização do CSS**, **padronização com metodologia BEM**, **reutilização de classes** e **facilidade de manutenção**.
-
-## Visão geral
-
-Esta versão foi reorganizada a partir do projeto original, com separação entre:
-
-- `index.html` → estrutura semântica da página
-- `layout.css` → regras de layout, containers, grid, flexbox e responsividade
-- `style.css` → identidade visual, tipografia, botões, cards e componentes
-
-O objetivo foi deixar o código mais limpo, modular e sustentável.
+Projeto desenvolvido com foco em **design responsivo moderno** e **refatoração de CSS utilizando SASS**, aplicando boas práticas de organização, escalabilidade e reutilização de código.
 
 ---
 
-## Tecnologias utilizadas
+## 🚀 Sobre o Projeto
 
-- HTML5
-- CSS3
-- Flexbox
-- CSS Grid
-- Media Queries
-- Unidades relativas (`rem`, `vh`, `%`, `fr`)
-- Metodologia BEM
+A **Agência Criativa Web** é uma landing page institucional que apresenta serviços de design digital, branding e presença online.
+
+O projeto foi inicialmente construído com CSS tradicional e posteriormente **refatorado para SASS**, visando melhorar a estrutura, manutenção e qualidade do código.
 
 ---
 
-## Estrutura do projeto
+## 🧠 Principais Objetivos da Refatoração
+
+* Organizar o CSS em uma arquitetura escalável
+* Reduzir repetição de código
+* Facilitar manutenção futura
+* Aplicar boas práticas de mercado (BEM + SASS)
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* HTML5
+* CSS3
+* SASS (SCSS)
+* Node.js (para compilação)
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```bash
-agencia-criativa-web-refatorado/
-DesignResponsivo/
-├── index.html
-├── css/
-│   └── estilos.css
-├── scss/
+📦 DesignResponsivo
+├── 📁 css
+│   └── estilos.css (arquivo compilado)
+├── 📁 scss
 │   ├── _base.scss
 │   ├── _variaveis.scss
 │   ├── _mixins.scss
 │   ├── _layout.scss
 │   ├── _componentes.scss
-│   └── estilos.scss
-└── package.json
+│   └── estilos.scss (arquivo principal)
+├── index.html
+├── package.json
+└── README.md
 ```
 
 ---
 
-## Seções da página
+## 🎯 Destaques da Refatoração
 
-A página contém as seguintes áreas:
+### ✅ 1. Organização com Partials (Arquitetura Modular)
 
-- **Home** — banner principal com destaque da agência
-- **Sobre nós** — descrição da proposta e valores
-- **Serviços** — cards com os serviços oferecidos
-- **Depoimentos** — comentários fictícios de clientes
-- **Contato** — informações e formulário de contato
+O código foi dividido por responsabilidade:
 
----
+* `_variaveis.scss` → cores, espaçamentos, fontes
+* `_mixins.scss` → reutilização de estilos
+* `_base.scss` → reset e estilos globais
+* `_layout.scss` → estrutura da página (grid, header, seções)
+* `_componentes.scss` → botões, cards, menus
 
-## Melhorias aplicadas na refatoração
-
-### 1. Organização do CSS
-- remoção de repetições desnecessárias
-- separação entre estrutura e aparência
-- hierarquia mais clara entre estilos globais e componentes
-
-### 2. Padronização com BEM
-Exemplos usados no projeto:
-
-- `.site-header__content`
-- `.section-heading__title`
-- `.service-card--featured`
-- `.contact-form__input--textarea`
-
-Isso facilita leitura, manutenção e expansão futura do código.
-
-### 3. Reutilização de classes
-Foram criadas classes reutilizáveis como:
-
-- `.container`
-- `.section`
-- `.card`
-- `.card--light`
-- `.card--dark`
-- `.btn`
-- `.btn--primary`
-- `.btn--secondary`
-
-### 4. Responsividade mantida
-O projeto continua totalmente responsivo com:
-
-- Flexbox no cabeçalho, botões e depoimentos
-- CSS Grid nas áreas principais e na seção de serviços
-- Media queries para tablets e celulares
-- imagens com `srcset`
-
-## Objetivo da atividade
-
-Aplicar os conceitos do módulo em uma página realista, com atenção a:
-
-- design responsivo
-- manutenção de código
-- organização do CSS
-- nomenclatura consistente
-- boas práticas de desenvolvimento front-end
+👉 Resultado: código mais limpo e fácil de manter.
 
 ---
 
-## Autor
+### 🎨 2. Uso de Variáveis
 
-Projeto desenvolvido para fins acadêmicos por **Felipe Gabriel Lambiazzi**.
+Padronização completa de:
+
+* cores
+* espaçamentos
+* tipografia
+* bordas e sombras
+
+```scss
+$color-accent: #61dafb;
+$space-md: 1rem;
+```
+
+👉 Facilita manutenção e consistência visual.
+
+---
+
+### 🔁 3. Mixins Reutilizáveis
+
+Criação de mixins para evitar repetição:
+
+* botões
+* cards
+* inputs
+* responsividade
+
+```scss
+@mixin button-base($bg, $color) {
+  padding: 0.85rem 1.45rem;
+  border-radius: 999px;
+  background: $bg;
+  color: $color;
+}
+```
+
+👉 Código mais enxuto e reutilizável.
+
+---
+
+### 🧩 4. Metodologia BEM
+
+Uso consistente de nomenclatura:
+
+```scss
+.nav__list
+.hero__title
+.card--dark
+```
+
+👉 Melhor leitura e organização dos componentes.
+
+---
+
+### 🌳 5. Aninhamento Controlado
+
+Uso de nesting para manter contexto sem exagero:
+
+```scss
+.nav {
+  &__link {
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+```
+
+👉 Código mais legível e estruturado.
+
+---
+
+### 📱 6. Responsividade Organizada
+
+Uso de mixins para media queries:
+
+```scss
+@include respond(md) {
+  .nav__list {
+    flex-direction: column;
+  }
+}
+```
+
+👉 Melhor controle de layout em diferentes telas.
+
+---
+
+### ⚙️ 7. Compilação com Node.js
+
+O projeto utiliza SASS via linha de comando:
+
+```bash
+npm install
+npx sass scss/estilos.scss css/estilos.css
+```
+
+Modo watch:
+
+```bash
+npx sass --watch scss/estilos.scss:css/estilos.css
+```
+
+---
+
+## 💡 Principais Aprendizados
+
+* Organização de CSS em projetos reais
+* Uso de arquitetura modular com SASS
+* Aplicação prática da metodologia BEM
+* Separação entre estrutura (layout) e componentes
+* Escrita de código mais escalável e profissional
+
+---
+
+## 🔥 Diferenciais do Projeto
+
+* Refatoração completa de CSS tradicional para SASS
+* Estrutura pronta para crescimento do projeto
+* Código limpo, reutilizável e bem organizado
+* Foco em boas práticas utilizadas no mercado
+
+---
+
+## 📸 Preview
+
+> Interface moderna, responsiva e com foco em experiência do usuário.
+
+---
+
+## 👨‍💻 Autor
+
+**Felipe Gabriel Lambiazzi**
+
+* 💼 Desenvolvedor em formação
+* 🔗 [LinkedIn](https://www.linkedin.com/in/felipe-gabriel-lambiazzi-734861140/)
+* 📧 [felipelambiazzi17@gmail.com](mailto:felipelambiazzi17@gmail.com)
+
+---
+
+## 📌 Considerações Finais
+
+Este projeto representa a transição de um código simples para uma estrutura profissional, demonstrando evolução técnica e preocupação com qualidade e escalabilidade.
+
+---
+
+⭐ Se você gostou do projeto, não esqueça de deixar uma estrela!
