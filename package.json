@@ -1,0 +1,23 @@
+{
+  "name": "cssavancado",
+  "version": "1.0.0",
+  "description": "Projeto acadêmico de uma página responsiva para a **Agência Criativa Web**, refatorado com foco em **organização do CSS**, **padronização com metodologia BEM**, **reutilização de classes** e **facilidade de manutenção**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeLambiazzi/DesignResponsivo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeLambiazzi/DesignResponsivo/issues"
+  },
+  "homepage": "https://github.com/FelipeLambiazzi/DesignResponsivo#readme",
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}

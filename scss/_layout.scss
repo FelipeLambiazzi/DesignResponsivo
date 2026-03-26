@@ -1,0 +1,158 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.site-header__content,
+.site-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: $space-md;
+  min-height: 5rem;
+}
+
+.nav__list,
+.hero__actions,
+.hero__highlights,
+.testimonials,
+.contact-list,
+.metrics {
+  display: flex;
+}
+
+.nav__list,
+.hero__actions,
+.hero__highlights,
+.testimonials,
+.contact-list {
+  flex-wrap: wrap;
+}
+
+.nav__list {
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.2rem;
+}
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding-block: 4rem 3rem;
+}
+
+.hero__layout,
+.about,
+.contact,
+.section-heading--split,
+.services-grid {
+  display: grid;
+}
+
+.hero__layout,
+.about,
+.contact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: $space-2xl;
+  align-items: center;
+}
+
+.section-heading--split {
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 38rem);
+  gap: 1.5rem;
+  align-items: end;
+}
+
+.services-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: $space-lg;
+}
+
+.metrics {
+  gap: 0.9rem;
+}
+
+.testimonials {
+  gap: $space-lg;
+}
+
+.testimonial-card {
+  flex: 1 1 18rem;
+}
+
+.contact-list {
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.contact-form {
+  display: grid;
+  gap: $space-md;
+  align-self: start;
+}
+
+.contact-form__group {
+  display: grid;
+  gap: $space-xs;
+}
+
+@include respond(lg) {
+  .hero__layout,
+  .about,
+  .contact,
+  .section-heading--split {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 5rem;
+  }
+}
+
+@include respond(md) {
+  .section {
+    padding-block: 4.5rem;
+  }
+
+  .site-header__content,
+  .site-footer__content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav__list {
+    justify-content: center;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@include respond(sm) {
+  .container {
+    width: min(94%, $container-width);
+  }
+
+  .hero__actions,
+  .hero__highlights,
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

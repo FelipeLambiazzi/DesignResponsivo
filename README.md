@@ -30,10 +30,18 @@ O objetivo foi deixar o código mais limpo, modular e sustentável.
 
 ```bash
 agencia-criativa-web-refatorado/
+DesignResponsivo/
 ├── index.html
-├── layout.css
-├── style.css
-└── README.md
+├── css/
+│   └── estilos.css
+├── scss/
+│   ├── _base.scss
+│   ├── _variaveis.scss
+│   ├── _mixins.scss
+│   ├── _layout.scss
+│   ├── _componentes.scss
+│   └── estilos.scss
+└── package.json
 ```
 
 ---

@@ -1,0 +1,350 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+@use "sass:math";
+
+.site-header {
+  backdrop-filter: blur(0.8rem);
+  background: rgba(7, 17, 31, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  @include flex-center(flex-start, center, 0.9rem);
+
+  &__mark {
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: $radius-md;
+    background: linear-gradient(135deg, $color-accent, $color-accent-alt);
+    color: $color-bg;
+    font-weight: 800;
+  }
+
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  &__title {
+    font-weight: 800;
+  }
+
+  &__subtitle {
+    font-size: 0.78rem;
+    color: rgba(220, 230, 242, 0.78);
+  }
+}
+
+.nav {
+  &__link {
+    font-size: 0.98rem;
+    font-weight: 600;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: $color-accent;
+      transform: translateY(-2px);
+    }
+    &:focus-visible {
+      color: $color-accent;
+    }
+  }
+}
+
+.hero {
+  background:
+    radial-gradient(
+      circle at left top,
+      rgba(97, 218, 251, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at right bottom,
+      rgba(143, 124, 255, 0.18),
+      transparent 24%
+    ),
+    linear-gradient(180deg, #08111f 0%, #0b1828 100%);
+
+  &__eyebrow {
+    display: inline-block;
+    margin-bottom: $space-md;
+    color: $color-accent;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    max-width: 11ch;
+    margin-bottom: 1.3rem;
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    line-height: 1.1;
+  }
+
+  &__description {
+    max-width: 38rem;
+    margin-bottom: 1.8rem;
+    color: rgba(220, 230, 242, 0.88);
+    font-size: 1rem;
+  }
+
+  &__actions {
+    gap: $space-md;
+    margin-bottom: $space-xl;
+  }
+
+  &__highlights {
+    gap: 0.9rem;
+  }
+
+  &__highlight-item {
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: $radius-pill;
+    background: rgba(255, 255, 255, 0.06);
+    font-size: 0.95rem;
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 24rem;
+    object-fit: cover;
+    box-shadow: $shadow-soft;
+  }
+}
+
+.section-heading {
+  margin-bottom: $space-3xl;
+
+  &__eyebrow {
+    display: inline-block;
+    margin-bottom: 0.9rem;
+    padding: $space-xxs 0.9rem;
+    border-radius: $radius-pill;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    max-width: 16ch;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+  }
+
+  &__description {
+    max-width: 38rem;
+    font-size: 1rem;
+  }
+
+  &--light {
+    .section-heading__eyebrow {
+      color: $color-accent;
+      border: 1px solid rgba(97, 218, 251, 0.25);
+    }
+  }
+
+  &--dark {
+    .section-heading__eyebrow {
+      color: $color-accent-dark;
+      border: 1px solid rgba(12, 90, 120, 0.14);
+      background: rgba(255, 255, 255, 0.45);
+    }
+  }
+}
+
+.about {
+  &__text {
+    font-size: 1rem;
+
+    & + .about__text {
+      margin-top: $space-md; // operador implícito de composição de espaçamento
+    }
+  }
+
+  &__card {
+    padding: $space-md;
+    background: rgba(255, 255, 255, 0.72);
+  }
+
+  &__image {
+    margin-bottom: $space-md;
+  }
+}
+
+.card {
+  padding: $space-xl;
+  border-radius: $radius-lg;
+
+  &--light {
+    @include card-base(
+      $color-surface-light,
+      $color-border-light,
+      $shadow-light
+    );
+  }
+
+  &--dark {
+    @include card-base($color-surface-dark, $color-border-dark, $shadow-soft);
+    backdrop-filter: blur(0.4rem);
+  }
+}
+
+.metrics {
+  &__item {
+    flex: 1;
+    padding: $space-md;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    background: #fff;
+  }
+
+  &__value {
+    display: block;
+    font-size: 1.4rem;
+    color: #08111f;
+    margin-bottom: math.div($space-xs, 2);
+  }
+
+  &__label {
+    font-size: 0.92rem;
+  }
+}
+
+.service-card {
+  min-height: 100%;
+
+  &--featured {
+    background: linear-gradient(
+      135deg,
+      rgba(97, 218, 251, 0.16),
+      rgba(143, 124, 255, 0.15)
+    );
+  }
+
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    display: inline-grid;
+    place-items: center;
+    margin-bottom: $space-md;
+    border-radius: $radius-sm;
+    background: rgba(255, 255, 255, 0.1);
+    color: $color-accent;
+    font-size: 1.2rem;
+  }
+
+  &__title {
+    margin-bottom: 0.7rem;
+    font-size: 1.15rem;
+  }
+
+  &__text {
+    font-size: 1rem;
+    color: rgba(220, 230, 242, 0.88);
+  }
+}
+
+.testimonial-card {
+  &__text {
+    margin-bottom: $space-md;
+  }
+
+  &__name {
+    margin-bottom: 0.7rem;
+    font-size: 1.15rem;
+  }
+
+  &__role {
+    font-size: 1rem;
+    color: $color-text-muted;
+  }
+}
+
+.contact {
+  &__text {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+.contact-list {
+  &__item {
+    padding: 1rem 1.1rem;
+    border-radius: $radius-md;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+.contact-form {
+  &__label {
+    font-weight: 600;
+  }
+
+  &__input {
+    @include input-base;
+
+    &::placeholder {
+      color: rgba(220, 230, 242, 0.64);
+    }
+
+    &--textarea {
+      resize: vertical;
+      min-height: 8rem;
+    }
+  }
+
+  &__button {
+    margin-top: $space-xxs;
+    cursor: pointer;
+  }
+}
+
+.btn {
+  &--primary {
+    @include button-base(
+      linear-gradient(135deg, $color-accent, #7be6ff),
+      $color-bg
+    );
+  }
+
+  &--secondary {
+    @include button-base(
+      rgba(255, 255, 255, 0.05),
+      #f6f9fc,
+      rgba(255, 255, 255, 0.2)
+    );
+  }
+}
+
+.site-footer {
+  padding-block: $space-lg;
+  background: #040b15;
+
+  &__text {
+    font-size: 0.95rem;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: $color-accent;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-accent;
+    }
+  }
+}
+
+@include respond(lg) {
+  .hero__title,
+  .section-heading__title {
+    max-width: 100%;
+  }
+}
